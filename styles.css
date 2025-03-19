@@ -1,27 +1,30 @@
-/* General Page Styling */
 body {
     background-color: black;
-    color: orange; /* Orange text */
-    font-family: 'Silkscreen', monospace; /* Apply the new retro font */
-    white-space: pre;
+    color: orange;
+    font-family: 'Silkscreen', monospace;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
-    overflow: hidden;
+    align-items: center;
+    min-height: 100vh; /* Keeps full height */
+    overflow-y: auto; /* Enables scrolling */
+    white-space: normal; /* Fixes broken text wrapping */
 }
 
-/* Boot Text */
 #boot {
-    font-size: 20px; /* Keep your preferred size */
+    font-size: 20px; /* Keep original size */
+    text-align: left; /* Ensures text stays aligned to the left */
+    position: absolute;
+    top: 20px; /* Adjust position if necessary */
+    left: 20px; /* Keeps it on the left side */
+    white-space: pre-wrap; /* Ensures formatting remains */
 }
 
-/* Hide Elements */
-.hidden { display: none; }
+.hidden { 
+    display: none; 
+}
 
-/* Loading Animation */
+/* Loading animation styles */
 .loader-container {
     display: none; /* Initially hidden */
     justify-content: center;
@@ -33,6 +36,7 @@ body {
     left: 0;
     background-color: black;
 }
+
 .loader {
     font-size: 25px; /* Same font size */
     font-family: 'Silkscreen', monospace; /* Apply the font */
@@ -40,13 +44,73 @@ body {
     text-align: center;
     white-space: nowrap;
 }
+
 @keyframes dots {
     0% { content: "Loading"; }
     25% { content: "Loading."; }
     50% { content: "Loading.."; }
     75% { content: "Loading..."; }
 }
+
 .loader::after {
     content: "Loading";
     animation: dots 1s infinite;
+}
+
+#title {
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: calc(10% + 20px); /* Adjusts to appear right below the title */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 40px;
+}
+
+.menu-link {
+    font-family: 'Silkscreen', monospace;
+    font-size: 24px;
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#content-container {
+    margin-top: 150px; /* Moves it below buttons */
+    text-align: justify; /* Ensures both left and right alignment */
+    width: 60%;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+#content-container h2 {
+    text-align: center; /* Keeps the title in the middle */
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+#content-container p {
+    text-align: justify;
+    text-justify: inter-word; /* Forces better spacing */
+    letter-spacing: 0.5px; /* Prevents uneven word gaps */
+    word-spacing: normal; /* Resets any weird spaces */
+    overflow-wrap: break-word; /* Prevents long words from messing up layout */
+    hyphens: none; /* Stops words from breaking mid-line */
+    display: block; /* Ensures justification applies correctly */
 }

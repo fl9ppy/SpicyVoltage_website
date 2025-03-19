@@ -9,7 +9,6 @@ const bootText = [
 ];
 
 const bootDiv = document.getElementById("boot");
-const mainDiv = document.getElementById("main");
 const loaderDiv = document.getElementById("loader");
 let lineIndex = 0;
 
@@ -69,8 +68,7 @@ function typeLine() {
             loaderDiv.style.display = "flex"; // Show loading animation
 
             setTimeout(() => {
-                loaderDiv.style.display = "none"; // Hide loading animation
-                mainDiv.classList.remove("hidden"); // Show main content
+                window.location.href = "main.html"; // Redirect to main.html
             }, 2000);
         }, 1000);
     }

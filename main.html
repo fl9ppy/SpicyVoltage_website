@@ -4,141 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Boot Sequence</title>
-    <style>
-        body {
-            background-color: black;
-            color: orange; /* Orange text */
-            font-family: 'Silkscreen', monospace; /* Apply the retro font */
-            white-space: pre;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            height: 100vh;
-            overflow: hidden;
-        }
-        #boot {
-            font-size: 20px; /* Adjusted size */
-        }
-        .hidden { display: none; }
-
-        /* Loading animation styles */
-        .loader-container {
-            display: none; /* Initially hidden */
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: black;
-        }
-        .loader {
-            font-size: 20px;
-            font-family: 'Silkscreen', monospace;
-            color: orange;
-            text-align: center;
-            white-space: nowrap;
-        }
-        @keyframes dots {
-            0% { content: "Loading"; }
-            25% { content: "Loading."; }
-            50% { content: "Loading.."; }
-            75% { content: "Loading..."; }
-        }
-        .loader::after {
-            content: "Loading";
-            animation: dots 1s infinite;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1 id="title">Spicy Voltage</h1>
+    <div id="button-container">
+        <div id="button-container">
+            <a href="#" class="menu-link" onclick="loadContent('blog')">Blog</a>
+            <a href="#" class="menu-link" onclick="loadContent('projects')">Projects</a>
+            <a href="#" class="menu-link" onclick="loadContent('competitions')">Competitions</a>
+            <a href="#" class="menu-link" onclick="loadContent('members')">Members</a>
+            <a href="#" class="menu-link" onclick="loadContent('contact')">Contact</a>
+        </div>  
+    </div>        
+    <!-- Content will be dynamically loaded here -->
+    <div id="content-container"></div>
+
     <div id="boot"></div>
     <div id="loader" class="hidden loader-container">
         <span class="loader"></span>
     </div>
-    
-    <script>
-        const bootText = [
-            "Gathering SpicyVoltage",
-            " ", // Empty line
-            "Waking up fl9ppy",
-            "Waiting for Cs1Dy to finish eating",
-            "Getting Karburator out of the car",
-            "Yelling at Zxeniku to start working",
-            "Telling ded_moon to stop with the misinformation"
-        ];
 
-        const bootDiv = document.getElementById("boot");
-        const loaderDiv = document.getElementById("loader");
-        let lineIndex = 0;
-
-        function typeEffect(element, text, speed, callback) {
-            let charIndex = 0;
-            const interval = setInterval(() => {
-                element.textContent += text[charIndex];
-                charIndex++;
-                if (charIndex >= text.length) {
-                    clearInterval(interval);
-                    callback();
-                }
-            }, speed);
-        }
-
-        function animateDots(element, callback) {
-            let dots = 0;
-            const interval = setInterval(() => {
-                element.textContent = element.dataset.text + '.'.repeat(dots);
-                dots = (dots + 1) % 4;
-            }, 300);
-
-            setTimeout(() => {
-                clearInterval(interval);
-                element.textContent = element.dataset.text + " [OK]";
-                callback();
-            }, 1500);
-        }
-
-        function typeLine() {
-            if (lineIndex < bootText.length) {
-                let line = document.createElement("div");
-                bootDiv.appendChild(line);
-                line.dataset.text = bootText[lineIndex];
-
-                if (bootText[lineIndex].trim() === "") { // If it's an empty space, just insert it
-                    line.textContent = " ";
-                    lineIndex++;
-                    setTimeout(typeLine, 500);
-                    return;
-                }
-
-                typeEffect(line, bootText[lineIndex], 50, () => {
-                    if (lineIndex === 0) {
-                        lineIndex++;
-                        setTimeout(typeLine, 500);
-                    } else {
-                        animateDots(line, () => {
-                            lineIndex++;
-                            setTimeout(typeLine, 500);
-                        });
-                    }
-                });
-            } else {
-                setTimeout(() => {
-                    bootDiv.classList.add("hidden"); // Hide boot sequence
-                    loaderDiv.classList.remove("hidden"); // Show loading animation
-
-                    setTimeout(() => {
-                        loaderDiv.classList.add("hidden"); // Hide loading animation
-                        document.body.innerHTML = "<h1>Welcome to My Retro Website</h1><p>This is the main content after boot-up.</p>";
-                    }, 2000);
-                }, 1000);
-            }
-        }
-
-        setTimeout(typeLine, 500);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
