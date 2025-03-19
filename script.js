@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        document.getElementById("title").click(); // Simulate clicking the title on every page load
+    }, 500); // Delay ensures smooth transition
+});
+
 function loadContent(section) {
     const contentContainer = document.getElementById("content-container");
 
@@ -35,12 +41,12 @@ function loadContent(section) {
             <p>Here are some of the projects developed by <strong>Spicy Voltage</strong>:</p>
             <ul>
                 <li>
-                    <strong>Automated Vertical Gardening</strong> – An improved version of modern gardening that 
+                    <strong><b>Automated Vertical Gardening</b></strong> – An improved version of modern gardening that 
                     allows planting on a small surface while maximizing harvests. The system automates watering, 
                     nutrient distribution, and environmental control, making urban gardening more efficient and sustainable.
                 </li>
                 <li>
-                    <strong>Crawler</strong> – A remote-controlled search and rescue robot designed for rocky and tight terrains. 
+                    <strong><b>Crawler</b></strong> – A remote-controlled search and rescue robot designed for rocky and tight terrains. 
                     Small and rugged, it can navigate cracks and caves, making it ideal for disaster response operations. 
                     Equipped with a 360° camera and facial recognition software, Crawler helps identify and locate 
                     trapped individuals in challenging environments.
@@ -53,11 +59,11 @@ function loadContent(section) {
             <h2>Competitions</h2>
             <p>Here are the competitions we competed in:</p>
             <ul>
-                <li><strong>DefCamp 2024</strong> - One of the biggest cybersecurity conferences and CTFs in Romania.</li>
-                <li><strong>UVT HackDays 2024</strong> - A hacking and security-focused competition at UVT.</li>
-                <li><strong>PoliHack v14</strong> && <strong>PoliHack v16</strong> - A major tech hackathon organised by OSUT.</li>
-                <li><strong>iTEC 2024</strong> - A student competition in informatics, engineering, and CTF challenges.</li>
-                <li><strong>ImaginaryCTF 2024</strong> - A global CTF event testing various cybersecurity skills.</li>
+                <li><strong><b>DefCamp 2024</b></strong> - One of the biggest cybersecurity conferences and CTFs in Romania.</li>
+                <li><strong><b>UVT HackDays 2024</b></strong> - A hacking and security-focused competition at UVT.</li>
+                <li><strong><b>PoliHack v14</b></strong> && <strong>PoliHack v16</strong> - A major tech hackathon organised by OSUT.</li>
+                <li><strong><b>iTEC 2024</b></strong> - A student competition in informatics, engineering, and CTF challenges.</li>
+                <li><strong><b>ImaginaryCTF 2024</b></strong> - A global CTF event testing various cybersecurity skills.</li>
             </ul>
         `;
     } else if (section === "contact") {
@@ -65,9 +71,9 @@ function loadContent(section) {
             <h2>Contact Us</h2>
             <p>Want to collaborate or just say hi? Reach out to <strong>Spicy Voltage</strong> via:</p>
             <ul>
-                <li><strong>Email:</strong> spicyvoltage@yahoo.com</li>
-                <li><strong>Instagram:</strong> <a href="https://www.instagram.com/spicy_voltage/">@spicy_voltage</a></li>
-                <li><strong>Discord:</strong> <a href="https://discord.gg/k2rakhHk4f">Join our server</a></li>
+                <li><strong><b>Email:</b></strong> spicyvoltage@yahoo.com</li>
+                <li><strong><b>Instagram:</b></strong> <a href="https://www.instagram.com/spicy_voltage/">@spicy_voltage</a></li>
+                <li><strong><b>Discord:</b></strong> <a href="https://discord.gg/k2rakhHk4f">Join our server</a></li>
             </ul>
         `;
     } else if (section === "members") {
@@ -75,12 +81,23 @@ function loadContent(section) {
             <h2>Meet the Team</h2>
             <p>Spicy Voltage is built by a group of talented and passionate hackers, programmers, and engineers:</p>
             <ul>
-                <li><strong>fl9ppy</strong> – Low-level security and reverse engineering.</li>
-                <li><strong>Zxeniku</strong> – Software developer and designer.</li>
-                <li><strong>Cs1Dy</strong> – Marketing and professional eater.</li>
-                <li><strong>Karburator</strong> – Robotics innovator.</li>
-                <li><strong>ded_moon</strong> – Hardware hacker</li>
+                <li><strong><b>fl9ppy</b></strong> – Low-level security and reverse engineering.</li>
+                <li><strong><b>Zxeniku</b></strong> – Software developer and designer.</li>
+                <li><strong><b>Cs1Dy</b></strong> – Marketing and professional eater.</li>
+                <li><strong><b>Karburator</b></strong> – Robotics innovator.</li>
+                <li><strong><b>ded_moon</b></strong> – Hardware hacker</li>
             </ul>
+        `;
+    } else if (section === "gallery") {
+        content = `
+            <h2>Photo Gallery</h2>
+            <div id="gallery">
+                <img src="images/photo1.jpeg" alt="Team at competition">
+                <img src="images/photo2.jpeg" alt="Working on a project">
+                <img src="images/photo3.jpeg" alt="Robot prototype">
+                <img src="images/photo4.jpeg" alt="CTF challenge setup">
+                <img src="images/photo5.jpeg" alt="Electronics workbench">
+            </div>
         `;
     }
 
