@@ -59,11 +59,11 @@ function loadContent(section) {
             <h2>Competitions</h2>
             <p>Here are the competitions we competed in:</p>
             <ul>
-                <li><strong><b>DefCamp 2024</b></strong> - One of the biggest cybersecurity conferences and CTFs in Romania.</li>
-                <li><strong><b>UVT HackDays 2024</b></strong> - A hacking and security-focused competition at UVT.</li>
-                <li><strong><b>PoliHack v14</b></strong> && <strong>PoliHack v16</strong> - A major tech hackathon organised by OSUT.</li>
-                <li><strong><b>iTEC 2024</b></strong> - A student competition in informatics, engineering, and CTF challenges.</li>
-                <li><strong><b>ImaginaryCTF 2024</b></strong> - A global CTF event testing various cybersecurity skills.</li>
+                <li><b><strong>DefCamp 2024</strong></b> - One of the biggest cybersecurity conferences and CTFs in Romania.</li>
+                <li><b><strong>UVT HackDays 2024</strong></b> - A hacking and security-focused competition at UVT.</li>
+                <li><b><strong>PoliHack v14</strong> && <strong>PoliHack v16</strong></b> - A major tech hackathon organised by OSUT.</li>
+                <li><b><strong>iTEC 2024</strong></b> - A student competition in informatics, engineering, and CTF challenges.</li>
+                <li><b><strong>ImaginaryCTF 2024</strong></b> - A global CTF event testing various cybersecurity skills.</li>
             </ul>
         `;
     } else if (section === "contact") {
