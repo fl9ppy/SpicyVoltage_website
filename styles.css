@@ -1,0 +1,52 @@
+/* General Page Styling */
+body {
+    background-color: black;
+    color: orange; /* Orange text */
+    font-family: 'Silkscreen', monospace; /* Apply the new retro font */
+    white-space: pre;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Boot Text */
+#boot {
+    font-size: 20px; /* Keep your preferred size */
+}
+
+/* Hide Elements */
+.hidden { display: none; }
+
+/* Loading Animation */
+.loader-container {
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+.loader {
+    font-size: 25px; /* Same font size */
+    font-family: 'Silkscreen', monospace; /* Apply the font */
+    color: orange;
+    text-align: center;
+    white-space: nowrap;
+}
+@keyframes dots {
+    0% { content: "Loading"; }
+    25% { content: "Loading."; }
+    50% { content: "Loading.."; }
+    75% { content: "Loading..."; }
+}
+.loader::after {
+    content: "Loading";
+    animation: dots 1s infinite;
+}
