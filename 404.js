@@ -13,6 +13,7 @@ var messages = [
     'Call tech support',
     'Call tech support maybe?',
     'What are you doing here?',
+    '\"Oh? Hi! So... How are you holding up?',
     '\"Oh. Hi. So... How are you holding up?',
     'Search deeper maybe',
     'Search deeper maybe.',
