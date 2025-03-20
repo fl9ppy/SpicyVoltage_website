@@ -58,7 +58,7 @@ function typeLine() {
             } else {
                 animateDots(line, () => {
                     lineIndex++;
-                    setTimeout(typeLine, 300);
+                    setTimeout(typeLine, 20);
                 });
             }
         });
@@ -69,7 +69,7 @@ function typeLine() {
 
             setTimeout(() => {
                 window.location.href = "main.html"; // Redirect to main.html
-            }, 2000);
+            }, 2500);
         }, 1000);
     }
 }
