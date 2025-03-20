@@ -64,6 +64,8 @@ function loadContent(section) {
                 <li><b><strong>PoliHack v14</strong> && <strong>PoliHack v16</strong></b> - A major tech hackathon organised by OSUT.</li>
                 <li><b><strong>iTEC 2024</strong></b> - A student competition in informatics, engineering, and CTF challenges.</li>
                 <li><b><strong>ImaginaryCTF 2024</strong></b> - A global CTF event testing various cybersecurity skills.</li>
+                <li><b><strong>Unihack 2023</strong></b> - A programming oriented hackathon made by UPT.</li>
+                <li><b><strong>Cloudflight Coding Contest</strong></b> - A coding competion held by Cloudflight.</li>
             </ul>
         `;
     } else if (section === "contact") {
