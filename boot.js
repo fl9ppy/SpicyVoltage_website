@@ -29,13 +29,13 @@ function animateDots(element, callback) {
     const interval = setInterval(() => {
         element.textContent = element.dataset.text + '.'.repeat(dots);
         dots = (dots + 1) % 4;
-    }, 300);
+    }, 200);
 
     setTimeout(() => {
         clearInterval(interval);
         element.textContent = element.dataset.text + " [OK]";
         callback();
-    }, 1500);
+    }, 1000);
 }
 
 function typeLine() {
@@ -47,18 +47,18 @@ function typeLine() {
         if (bootText[lineIndex].trim() === "") { // If it's an empty space, just insert it
             line.textContent = " ";
             lineIndex++;
-            setTimeout(typeLine, 500);
+            setTimeout(typeLine, 300);
             return;
         }
 
-        typeEffect(line, bootText[lineIndex], 50, () => {
+        typeEffect(line, bootText[lineIndex], 30, () => {
             if (lineIndex === 0) {
                 lineIndex++;
-                setTimeout(typeLine, 500);
+                setTimeout(typeLine, 300);
             } else {
                 animateDots(line, () => {
                     lineIndex++;
-                    setTimeout(typeLine, 500);
+                    setTimeout(typeLine, 300);
                 });
             }
         });
