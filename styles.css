@@ -21,8 +21,8 @@ body {
     white-space: pre-wrap; /* Ensures formatting remains */
 }
 
-.hidden { 
-    display: none; 
+.hidden {
+    display: none;
 }
 
 /* Loading animation styles */
@@ -155,4 +155,40 @@ body {
 
 #gallery img:hover {
     transform: scale(1.1);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #title {
+        font-size: 32px;
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+    }
+
+    #button-container {
+        flex-direction: column;
+        gap: 20px;
+        position: static;
+        transform: none;
+        align-items: center;
+    }
+
+    .menu-link {
+        font-size: 18px;
+    }
+
+    #content-container {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    #gallery img {
+        width: 100%;
+        max-width: 100%;
+    }
 }
