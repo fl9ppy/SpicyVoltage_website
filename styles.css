@@ -136,6 +136,10 @@ body {
     display: block; /* Ensures justification applies correctly */
 }
 
+#content-container li {
+    text-align: left;
+}
+
 /* Photo Gallery Styling */
 #gallery {
     display: flex;
