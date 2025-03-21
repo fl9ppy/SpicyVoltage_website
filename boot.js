@@ -1,6 +1,7 @@
+
 const bootText = [
     "Gathering SpicyVoltage",
-    " ", // <-- Corrected: Insert an actual blank space
+    " ",
     "Waking up fl9ppy",
     "Waiting for Cs1Dy to finish eating",
     "Getting Karburator out of the racing sim",
@@ -10,11 +11,40 @@ const bootText = [
 
 const bootDiv = document.getElementById("boot");
 const loaderDiv = document.getElementById("loader");
+
+// Add skip text
+const skipText = document.createElement("div");
+skipText.textContent = "Press any key to skip animation";
+skipText.style.position = "fixed";
+skipText.style.bottom = "20px";
+skipText.style.left = "50%";
+skipText.style.transform = "translateX(-50%)";
+skipText.style.color = "orange";
+skipText.style.fontFamily = "'Silkscreen', monospace";
+skipText.style.fontSize = "14px";
+document.body.appendChild(skipText);
+
 let lineIndex = 0;
+let skipRequested = false;
+
+function skipBoot() {
+    skipRequested = true;
+    bootDiv.style.display = "none";
+    loaderDiv.style.display = "flex";
+    setTimeout(() => {
+        window.location.href = "main.html";
+    }, 1000);
+}
+
+document.addEventListener("keydown", skipBoot);
 
 function typeEffect(element, text, speed, callback) {
     let charIndex = 0;
     const interval = setInterval(() => {
+        if (skipRequested) {
+            clearInterval(interval);
+            return;
+        }
         element.textContent += text[charIndex];
         charIndex++;
         if (charIndex >= text.length) {
@@ -27,6 +57,10 @@ function typeEffect(element, text, speed, callback) {
 function animateDots(element, callback) {
     let dots = 0;
     const interval = setInterval(() => {
+        if (skipRequested) {
+            clearInterval(interval);
+            return;
+        }
         element.textContent = element.dataset.text + '.'.repeat(dots);
         dots = (dots + 1) % 4;
     }, 200);
@@ -39,12 +73,13 @@ function animateDots(element, callback) {
 }
 
 function typeLine() {
+    if (skipRequested) return;
     if (lineIndex < bootText.length) {
         let line = document.createElement("div");
         bootDiv.appendChild(line);
         line.dataset.text = bootText[lineIndex];
 
-        if (bootText[lineIndex].trim() === "") { // If it's an empty space, just insert it
+        if (bootText[lineIndex].trim() === "") {
             line.textContent = " ";
             lineIndex++;
             setTimeout(typeLine, 300);
@@ -58,18 +93,19 @@ function typeLine() {
             } else {
                 animateDots(line, () => {
                     lineIndex++;
-                    setTimeout(typeLine, 20);
+                    setTimeout(typeLine, 300);
                 });
             }
         });
     } else {
         setTimeout(() => {
-            bootDiv.style.display = "none"; // Hide boot sequence
-            loaderDiv.style.display = "flex"; // Show loading animation
-
-            setTimeout(() => {
-                window.location.href = "main.html"; // Redirect to main.html
-            }, 2500);
+            if (!skipRequested) {
+                bootDiv.style.display = "none";
+                loaderDiv.style.display = "flex";
+                setTimeout(() => {
+                    window.location.href = "main.html";
+                }, 2000);
+            }
         }, 1000);
     }
 }
