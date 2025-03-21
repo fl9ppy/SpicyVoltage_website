@@ -74,8 +74,8 @@ function loadContent(section) {
             <p>Want to collaborate or just say hi? Reach out to <strong>Spicy Voltage</strong> via:</p>
             <ul>
                 <li><strong><b>Email:</b></strong> spicyvoltage@yahoo.com</li>
-                <li><strong><b>Instagram:</b></strong> <a href="https://www.instagram.com/spicy_voltage/">@spicy_voltage</a></li>
-                <li><strong><b>Discord:</b></strong> <a href="https://discord.gg/k2rakhHk4f">Join our server</a></li>
+                <li><strong><b>Instagram:</b></strong> <a href="https://www.instagram.com/spicy_voltage/" target="_blank" rel="noopener noreferrer">@spicy_voltage</a></li>
+                <li><strong><b>Discord:</b></strong> <a href="https://discord.gg/k2rakhHk4f" target="_blank" rel="noopener noreferrer">Join our server</a></li>
             </ul>
         `;
     } else if (section === "members") {
