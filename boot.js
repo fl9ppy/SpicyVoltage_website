@@ -14,7 +14,7 @@ const loaderDiv = document.getElementById("loader");
 
 // Add skip text
 const skipText = document.createElement("div");
-skipText.textContent = "Press any key to skip animation";
+skipText.textContent = "Press any key or click anywhere to skip animation";
 skipText.style.position = "fixed";
 skipText.style.bottom = "20px";
 skipText.style.left = "50%";
@@ -36,7 +36,9 @@ function skipBoot() {
     }, 1000);
 }
 
+// Allow skipping by key press or mouse click
 document.addEventListener("keydown", skipBoot);
+document.addEventListener("click", skipBoot);
 
 function typeEffect(element, text, speed, callback) {
     let charIndex = 0;
