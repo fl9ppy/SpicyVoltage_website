@@ -126,27 +126,27 @@ function loadContent(section) {
                 <li>
                     <strong><b>fl9ppy</b></strong> 
                     – Tech enthusiast, hacker (I promise I'm not a skiddie) and software developer. Coffee and Kali are my best friends xD. 
-                    <img src="images/fl9ppy.jpeg" alt="fl9ppy">
+                    <img src="images/fl9ppy.jpeg" alt="fl9ppy" class="member-photo">
                 </li>
                 <li>
                     <strong><b>Zxeniku</b></strong> 
                     – Writes code, breaks code, designs stuff… then takes a nap like nothing happened. 
-                    <img src="images/Zxeniku.jpg" alt="Zxeniku">
+                    <img src="images/Zxeniku.jpg" alt="Zxeniku" class="member-photo">
                 </li>
                 <li>
                     <strong><b>Cs1Dy</b></strong> 
                     – Hi I'm Cs1Dy, I do marketing and sometimes code(never) and love spicy food(can't handle my spiciness).
-                    <img src="images/Cs1Dy.jpg" alt="Cs1Dy">
+                    <img src="images/Cs1Dy.jpg" alt="Cs1Dy" class="member-photo">
                 </li>
                 <li>
                     <strong><b>Karburator</b></strong> 
-                    – I'm not really the brightest one, therefore i enjoy working with screws and electronical components.
-                    <img src="images/karburator.jpg" alt="Karburator">
+                    – I'm not really the brightest one, therefore I enjoy working with screws and electronical components.
+                    <img src="images/karburator.jpg" alt="Karburator" class="member-photo">
                 </li>
                 <li>
                     <strong><b>ded_moon</b></strong> 
                     – Tinkerer with a passion for maps, tanks, civil engineering, and delightfully impractical solutions.
-                    <img src="images/ded_moon.jpg" alt="ded-moon">
+                    <img src="images/ded_moon.jpg" alt="ded-moon" class="member-photo">
                 </li>
             </ul>
         `;

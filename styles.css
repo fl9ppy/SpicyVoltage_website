@@ -195,4 +195,15 @@ body {
         width: 100%;
         max-width: 100%;
     }
+
+    /* Members Section - Responsive Images */
+    .member-photo {
+        width: 100%; /* Makes it take the full width of its container */
+        max-width: 300px; /* Prevents it from being too large on bigger screens */
+        height: auto; /* Maintains aspect ratio */
+        display: block; /* Ensures proper positioning */
+        margin: 10px auto; /* Centers the images */
+        border-radius: 10px; /* Optional: Rounded corners for a smoother look */
+        border: 2px solid orange; /* Matches your site's style */
+    }
 }
