@@ -26,6 +26,8 @@ var messages = [
     'empty',
     "Are you lost?",
     'error 404, error mesage not found',
+    'StaySpicy',
+    'StaySpicy'
 ]
 function newMessage() {
         var randomNumber = Math.floor(Math.random() * (messages.length));
