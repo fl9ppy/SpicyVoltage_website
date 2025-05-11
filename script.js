@@ -159,9 +159,16 @@ function loadContent(section) {
                 <img src="images/photo1.jpeg" alt="Team at competition">
                 <img src="images/photo2.jpeg" alt="Working on a project">
                 <img src="images/photo3.jpeg" alt="Robot prototype">
-                <img src="images/photo4.jpeg" alt="CTF challenge setup">
-                <img src="images/photo5.jpeg" alt="Electronics workbench">
-            </div>
+                <img src="images/photo4.jpeg" alt="got lazy, not alt text xD">
+                <img src="images/photo5.jpeg" alt="got lazy, not alt text xD">
+                <img src="images/photo6.jpeg" alt="got lazy, not alt text xD">
+                <img src="images/photo7.jpeg" alt="got lazy, not alt text xD">
+                <img src="images/photo8.jpeg" alt="got lazy, not alt text xD">
+                <img src="images/photo9.jpg" alt="got lazy, not alt text xD">
+                <img src="images/photo10.jpg" alt="got lazy, not alt text xD">
+                <img src="images/photo11.jpg" alt="got lazy, not alt text xD">
+                <img src="images/photo13.jpg" alt="got lazy, not alt text xD">
+		</div>
         `;
     }
 
