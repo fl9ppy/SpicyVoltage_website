@@ -97,7 +97,7 @@ function loadContent(section) {
             <ul>
                 <li><b><strong>DefCamp 2024</strong></b> - One of the biggest cybersecurity conferences and CTFs in Romania.</li>
                 <li><b><strong>UVT HackDays 2024</strong></b> - A hacking and security-focused competition at UVT.</li>
-                <li><b><strong>PoliHack v14</strong> && <strong>PoliHack v16</strong></b> - A major tech hackathon organised by OSUT.</li>
+                <li><b><strong>PoliHack v14</strong> , <strong>PoliHack v16</strong> && <strong>PoliHack v17</strong></b> - A major tech hackathon organised by OSUT.</li>
                 <li><b><strong>iTEC 2024</strong></b> - A student competition in informatics, engineering, and CTF challenges.</li>
                 <li><b><strong>ImaginaryCTF 2024</strong></b> - A global CTF event testing various cybersecurity skills.</li>
                 <li><b><strong>Unihack 2023</strong></b> - A programming oriented hackathon made by UPT.</li>
@@ -105,7 +105,9 @@ function loadContent(section) {
                 <li><b><strong>Qube2space</strong></b> - A space engineering competition aimed at students.</li>
                 <li><b><strong>Anton Saimac II && III</strong></b> - Engineering and innovation contest organised by FIH.</li>
                 <li><b><strong>OSC (Olimpiada de securitate cibernetica)</strong></b> - Romania's cybersecurity olympiad.</li>
-                <li><b><strong>UNR 22 (TBA)</strong></b> - Cybersecurity contest.</li>
+                <li><b><strong>UNR 22</strong></b> - Cybersecurity contest.</li>
+		<li><b><strong>UniVsThreats 2025</strong></b> - A CTF organised by the UVT-CTF team</li>
+		<li><b><strong>BSides Transylvania 2025</strong></b> - Cybersecurity conference held in Cluj-Napoca + CTF</li>
             </ul>
         `;
     } else if (section === "contact") {
