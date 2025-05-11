@@ -161,7 +161,7 @@ function loadContent(section) {
                 <img src="images/photo3.jpeg" alt="Robot prototype">
                 <img src="images/photo4.jpeg" alt="got lazy, not alt text xD">
                 <img src="images/photo5.jpeg" alt="got lazy, not alt text xD">
-                <img src="images/photo6.jpeg" alt="got lazy, not alt text xD">
+                <img src="images/photo6.jpg" alt="got lazy, not alt text xD">
                 <img src="images/photo7.jpeg" alt="got lazy, not alt text xD">
                 <img src="images/photo8.jpeg" alt="got lazy, not alt text xD">
                 <img src="images/photo9.jpg" alt="got lazy, not alt text xD">
