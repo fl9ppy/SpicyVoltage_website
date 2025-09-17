@@ -150,6 +150,11 @@ function loadContent(section) {
                     – Tinkerer with a passion for maps, tanks, civil engineering, and delightfully impractical solutions.
                     <img src="images/ded_moon.jpg" alt="ded-moon" class="member-photo">
                 </li>
+                <li>
+                    <strong><b>Mr_PLugger</b></strong> 
+                    – Hi There , Im Mr_PLugger and I try to plug and unplug things until something explodes. GLHF to catch me.
+                    <img src="images/Mr_PLugger.jpeg" alt="Mr_PLugger" class="member-photo">
+                </li>
             </ul>
         `;
     } else if (section === "gallery") {
